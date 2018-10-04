@@ -316,8 +316,12 @@ header.masthead .intro-text .intro-heading {
 
 #contact {
   width: 100%;
+  height: auto;
+  padding-bottom: 0;
+}
+
+#locationOrd {
   height: 30rem;
-  padding: 0;
 }
 
 footer {
