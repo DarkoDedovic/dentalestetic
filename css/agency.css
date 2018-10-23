@@ -14,15 +14,15 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: #eca1a6;
 }
 
 a:hover {
-  color: #fec503;
+  color: #e3777e;
 }
 
 .text-primary {
-  color: #fed136 !important;
+  color: #eca1a6 !important;
 }
 
 h1,
@@ -71,13 +71,13 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #eca1a6;
+  border-color: #eca1a6;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  background-color: #e68188 !important;
+  border-color: #e68188 !important;
   color: white;
 }
 
@@ -87,12 +87,12 @@ section h3.section-subheading {
 }
 
 ::-moz-selection {
-  background: #fed136;
+  background: #eca1a6;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fed136;
+  background: #eca1a6;
   text-shadow: none;
 }
 
@@ -119,17 +119,17 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fed136;
+  background-color: #eca1a6;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
+  color: #eca1a6;
   font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: #e3777e;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -142,7 +142,11 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #eca1a6;
+}
+
+#mainNav .navbar-nav .nav-item-call {
+  color: #1de227;
 }
 
 @media (min-width: 992px) {
@@ -171,12 +175,15 @@ img::-moz-selection {
     font-size: 1.25em;
     padding: 12px 0;
   }
+  #mainNav .nav-item-call {
+    display: none;
+  }
 }
 
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../img/portfolio/fullsize/iva.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -246,7 +253,7 @@ header.masthead .intro-text .intro-heading {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(254, 209, 54, 0.9);
+  background: rgba(236, 161, 166, 0.9);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -363,5 +370,5 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fed136;
+  background-color: #eca1a6;
 }

@@ -12,7 +12,7 @@
     @include heading-font;
   }
   .navbar-brand {
-    color: $primary;
+    color: $primary;  
     @include script-font;
     &.active,
     &:active,
@@ -36,8 +36,12 @@
         }
       }
     }
-  }
+    .nav-item-call {
+      color: $green;
+    }
 }
+}
+
 @media(min-width:992px) {
   #mainNav {
     padding-top: 25px;
@@ -68,6 +72,9 @@
         font-size: 1.25em;
         padding: 12px 0;
       }
+    }
+     .nav-item-call{
+      display: none;
     }
   }
 }
