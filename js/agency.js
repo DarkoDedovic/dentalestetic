@@ -1,94 +1,101 @@
-(function($) {
-  "use strict"; // Start of use strict
+(function ($) {
+    "use strict"; // Start of use strict
+    // Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
 
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 54)
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
-    }
-  });
 
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: (target.offset().top - 54)
+                }, 1000, "easeInOutExpo");
+                return false;
+            }
+        }
+    });
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 56
-  });
+    // Closes responsive menu when a scroll trigger link is clicked
+    $('.js-scroll-trigger').click(function () {
+        $('.navbar-collapse').collapse('hide');
+    });
 
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+    // Activate scrollspy to add active class to navbar items on scroll
+    $('body').scrollspy({
+        target: '#mainNav',
+        offset: 56
+    });
 
-  // Scroll reveal calls
-  window.sr = ScrollReveal();
+    // Collapse Navbar
+    var navbarCollapse = function () {
+        if ($("#mainNav").offset().top > 100) {
+            $("#mainNav").addClass("navbar-shrink");
+        } else {
+            $("#mainNav").removeClass("navbar-shrink");
+        }
+    };
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
 
-  sr.reveal('.sr-icon-1', {
-    delay: 200,
-    scale: 0
-  });
-  sr.reveal('.sr-icon-2', {
-    delay: 400,
-    scale: 0
-  });
-  sr.reveal('.sr-icon-3', {
-    delay: 600,
-    scale: 0
-  });
-  sr.reveal('.sr-icon-4', {
-    delay: 800,
-    scale: 0
-  });
-  sr.reveal('.sr-button', {
-    delay: 200,
-    distance: '15px',
-    origin: 'bottom',
-    scale: 0.8
-  });
-  sr.reveal('.sr-contact-1', {
-    delay: 200,
-    scale: 0
-  });
-  sr.reveal('.sr-contact-2', {
-    delay: 400,
-    scale: 0
-  });
+    // Scroll reveal calls
+    window.sr = ScrollReveal();
 
-  // Magnific popup calls
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1]
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-    }
-  });
+    sr.reveal('.sr-icon-1', {
+        delay: 200,
+        scale: 0
+    });
+    sr.reveal('.sr-icon-2', {
+        delay: 400,
+        scale: 0
+    });
+    sr.reveal('.sr-icon-3', {
+        delay: 600,
+        scale: 0
+    });
+    sr.reveal('.sr-icon-4', {
+        delay: 800,
+        scale: 0
+    });
+    sr.reveal('.sr-button', {
+        delay: 200,
+        distance: '15px',
+        origin: 'bottom',
+        scale: 0.8
+    });
+    sr.reveal('.sr-contact-1', {
+        delay: 200,
+        scale: 0
+    });
+    sr.reveal('.sr-contact-2', {
+        delay: 400,
+        scale: 0
+    });
 
-  
+    // Magnific popup calls
+    $('.popup-gallery').each(function () { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+            }
+        });
+    });
+
+    // DETECT USER DEVICE
+
+    let userDevice = $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+    console.log(userDevice);
+
 
 })(jQuery); // End of use strict
