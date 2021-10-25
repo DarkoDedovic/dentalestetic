@@ -22,7 +22,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
       from: `${name} testovski863@gmail.com`,
       to: "darko.dedovic86@gmail.com",
       subject: "I'M A PICKLE!!!", // email subject
-      html: `<p style="font-size: 16px;">Pickle Riiiiiiiiiiiiiiiick!!</p>
+      html: `<p style="font-size: 16px;">Neki tekjst</p>
                 <br />
             
             <p>Telefon: ${phone}</p>
